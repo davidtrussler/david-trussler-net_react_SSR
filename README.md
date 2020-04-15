@@ -6,6 +6,7 @@ Makes a build of my personal site in React, built from the ground up
 
 - run `npm install` so install all dependencies
 - run `npm run start` to configure and start a development server
+- run `npm run build` to create a production bundle
 
 ## Branches
 
