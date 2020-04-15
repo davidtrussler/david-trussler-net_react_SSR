@@ -4,7 +4,9 @@
   "description": "Makes a build of my personal site in React, built from the ground up",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "webpack-dev-server --hot --open", 
+    "build": "webpack --config webpack.config.js --mode-production"
   },
   "repository": {
     "type": "git",
