@@ -23,6 +23,5 @@ This is based on [Create a React project from scratch (without create-react-app)
   - adds webpack configuration file
   - adds index.html file
   - adds App.js
-  - adds App.css
   - adds index.js
   - updates package.json
