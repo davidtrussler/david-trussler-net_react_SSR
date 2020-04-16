@@ -4,9 +4,8 @@
   "description": "Makes a build of my personal site in React, built from the ground up",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
-    "start": "webpack-dev-server --hot --open", 
-    "build": "webpack --config webpack.config.js --mode-production"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack && nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,16 +17,33 @@
     "url": "https://github.com/davidtrussler/david-trussler-net_react_SSR/issues"
   },
   "homepage": "https://github.com/davidtrussler/david-trussler-net_react_SSR#readme",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
+  },
   "dependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/preset-react": "^7.9.4",
-    "babel-loader": "^8.1.0",
-    "html-webpack-plugin": "^4.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "4.4.0-beta.8",
+    "serialize-javascript": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.2",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-node-externals": "^1.7.2"
   }
 }
