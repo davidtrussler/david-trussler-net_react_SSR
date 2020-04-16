@@ -1,0 +1,33 @@
+{
+  "name": "david-trussler-net_react_ssr",
+  "version": "1.0.0",
+  "description": "Makes a build of my personal site in React, built from the ground up",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "webpack-dev-server --hot --open", 
+    "build": "webpack --config webpack.config.js --mode-production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidtrussler/david-trussler-net_react_SSR.git"
+  },
+  "author": "David Trussler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidtrussler/david-trussler-net_react_SSR/issues"
+  },
+  "homepage": "https://github.com/davidtrussler/david-trussler-net_react_SSR#readme",
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
