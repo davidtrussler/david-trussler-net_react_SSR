@@ -75,3 +75,6 @@ My steps:
 - Adds client side files
   - adds bundle.js
   - adds client.js
+- Adds start files
+  - adds index.js
+  - adds app.js
