@@ -67,3 +67,5 @@ My steps:
 - Configure Babel and Webpack
   - Adds .babelrc
   - Adds webpack.config.js
+  - Adds App.js
+  
