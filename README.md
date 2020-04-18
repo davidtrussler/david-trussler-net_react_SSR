@@ -64,4 +64,6 @@ It follows these (actually four rather than the titular three) steps:
 
 My steps: 
 - Create package.json with all dependencies for the project
-
+- Configure Babel and Webpack
+  - Adds .babelrc
+  - Adds webpack.config.js
