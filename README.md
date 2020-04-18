@@ -67,5 +67,9 @@ My steps:
 - Configure Babel and Webpack
   - Adds .babelrc
   - Adds webpack.config.js
-  - Adds App.js
-  - Adds Redux files
+- Adds App.js
+- Adds Redux files
+- Adds server side files
+  - adds template.js
+  - adds server.js
+
