@@ -12,7 +12,11 @@ Makes a build of my personal site in React, built from the ground up
 
 ### [React-project-from-scratch_Tim-Givois](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/React-project-from-scratch_Tim-Givois)
 
-This is based on [Create a React project from scratch (without create-react-app)](https://medium.com/@tim.givois.mendez/create-a-react-project-from-scratch-without-create-react-app-f02fce4e05b) by Tim Givois and follows these steps: 
+This is based on [Create a React project from scratch (without create-react-app)](https://medium.com/@tim.givois.mendez/create-a-react-project-from-scratch-without-create-react-app-f02fce4e05b) by Tim Givois
+
+It sets up a very basic skeleton app
+
+It follows these steps: 
 
 - Creating the project and adding dependencies
   - creates package.json
@@ -29,13 +33,19 @@ This is based on [Create a React project from scratch (without create-react-app)
 
 ### [Server-rendering_Tyler-McGinnis](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/Server-rendering_Tyler-McGinnis)
 
-This is based on [Server Rendering with React and React Router](https://tylermcginnis.com/react-router-server-rendering/) by Tyler McGinnis and follows these steps: 
+This is based on [Server Rendering with React and React Router](https://tylermcginnis.com/react-router-server-rendering/) by Tyler McGinnis
 
-- 1. Creates a React component
+It sets up server and client side rendering of the skeleton app
+
+Right now it is not fully functional
+
+It follows these steps: 
+
+- Creates a React component
   - updates webpack.config.js
   - updates package.json
   - creates the shared directory containing App.js
-- 2. Creates a server
+- Creates a server
   - creates the server directory containing index.js
-- 3. Creates a react app to serve client side
+- Creates a react app to serve client side
   - creates the browser directory containing index.js
