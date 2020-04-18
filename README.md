@@ -61,3 +61,7 @@ It follows these (actually four rather than the titular three) steps:
 - Optionally dispatch some actions
 - Get the state out of the Store and perform SSR
 - Send the state obtained in the previous step along with the response
+
+My steps: 
+- Create package.json with all dependencies for the project
+
