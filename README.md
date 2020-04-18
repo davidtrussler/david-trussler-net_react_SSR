@@ -49,3 +49,32 @@ It follows these steps:
   - creates the server directory containing index.js
 - Creates a react app to serve client side
   - creates the browser directory containing index.js
+
+### [SSR_Rohit-Kumar](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/SSR_Rohit-Kumar)
+
+This is based on [How to implement server-side rendering in your React app in three simple steps](https://www.freecodecamp.org/news/server-side-rendering-your-react-app-in-three-simple-steps-7a82b95db82e/) by Rohit Kumar
+
+It sets up server and client side rendering of a new skeleton app
+
+It follows these (actually four rather than the titular three) steps: 
+- Create a fresh Redux Store on every request
+- Optionally dispatch some actions
+- Get the state out of the Store and perform SSR
+- Send the state obtained in the previous step along with the response
+
+My steps: 
+- Create package.json with all dependencies for the project
+- Configure Babel and Webpack
+  - Adds .babelrc
+  - Adds webpack.config.js
+- Adds App.js
+- Adds Redux files
+- Adds server side files
+  - adds template.js
+  - adds server.js
+- Adds client side files
+  - adds bundle.js
+  - adds client.js
+- Adds start files
+  - adds index.js
+  - adds app.js
