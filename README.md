@@ -68,4 +68,4 @@ My steps:
   - Adds .babelrc
   - Adds webpack.config.js
   - Adds App.js
-  
+  - Adds Redux files
