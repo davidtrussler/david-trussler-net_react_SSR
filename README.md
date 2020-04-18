@@ -72,4 +72,6 @@ My steps:
 - Adds server side files
   - adds template.js
   - adds server.js
-
+- Adds client side files
+  - adds bundle.js
+  - adds client.js
