@@ -80,3 +80,10 @@ My steps:
   - adds app.js
 
 ### [Server-side-rendering_Frikky](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/Server-side-rendering_Frikky)
+
+This is based on [Server side rendering (SSR) with pure React](https://medium.com/swlh/moving-your-website-to-server-side-rendering-ssr-in-reactjs-36278d4a87f5) by Frikky
+
+It sets up server and client side rendering of the skeleton app
+
+It follows these steps: 
+- installs dependencies
