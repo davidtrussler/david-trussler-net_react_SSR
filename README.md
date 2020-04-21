@@ -89,4 +89,5 @@ It follows these steps:
 - installs dependencies
 - updates babel config
 - creates functions folder and transpiles App.js into it
-- copy package.json into functions
+- copies package.json into functions
+- creates the client/server directory structure
