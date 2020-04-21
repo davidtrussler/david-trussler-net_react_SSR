@@ -88,3 +88,5 @@ It sets up server and client side rendering of the skeleton app
 It follows these steps: 
 - installs dependencies
 - updates babel config
+- creates functions folder and transpiles App.js into it
+
