@@ -91,3 +91,4 @@ It follows these steps:
 - creates functions folder and transpiles App.js into it
 - copies package.json into functions
 - creates the client/server directory structure
+- create basic server code with express
