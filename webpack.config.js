@@ -9,7 +9,7 @@ const browserConfig = {
     filename: 'bundle.js',
     publicPath: '/'
   },
-  mode: 'production', 
+  mode: 'development', 
   module: {
     rules: [
       { test: /\.(js)$/, use: 'babel-loader' },
@@ -31,7 +31,7 @@ const serverConfig = {
     filename: 'server.js',
     publicPath: '/'
   },
-  mode: 'production', 
+  mode: 'development', 
   module: {
     rules: [
       { test: /\.(js)$/, use: 'babel-loader' }
