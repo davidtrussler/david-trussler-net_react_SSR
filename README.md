@@ -78,3 +78,17 @@ My steps:
 - Adds start files
   - adds index.js
   - adds app.js
+
+### [Server-side-rendering_Frikky](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/Server-side-rendering_Frikky)
+
+This is based on [Server side rendering (SSR) with pure React](https://medium.com/swlh/moving-your-website-to-server-side-rendering-ssr-in-reactjs-36278d4a87f5) by Frikky
+
+It sets up server and client side rendering of the skeleton app
+
+It follows these steps: 
+- installs dependencies
+- updates babel config
+- creates functions folder and transpiles App.js into it
+- copies package.json into functions
+- creates the client/server directory structure
+- create basic server code with express
