@@ -5,10 +5,11 @@ Makes a build of my personal site in React, built from the ground up
 ## Set up
 
 - run `npm install` so install all dependencies
-- run `npm run start` to configure and start a development server
-- run `npm run build` to create a production bundle
+- run `npm start` to configure and start a development server
 
-## Branches
+***
+
+## Legacy Branches
 
 ### [React-project-from-scratch_Tim-Givois](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/React-project-from-scratch_Tim-Givois)
 
