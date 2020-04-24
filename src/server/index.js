@@ -15,8 +15,10 @@ app.get('/', (req, res) => {
 		<!doctype html>
 		<html>
 			<head>
+				<title>David Trussler</title>
 				<meta charset="utf-8"/>
-				<title>React Example</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<style>${scss}</style>
 			</head>
 			<body>
 			  <div id="app">${markup}</div>
