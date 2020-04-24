@@ -21,23 +21,15 @@
     "presets": [
       "@babel/preset-env",
       "@babel/preset-react"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-object-rest-spread"
     ]
   },
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "isomorphic-fetch": "^2.2.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "4.4.0-beta.8",
-    "serialize-javascript": "^3.0.0"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.1.0",
