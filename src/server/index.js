@@ -2,6 +2,7 @@ import React from 'react'
 import express from 'express'
 import ReactDOMServer from 'react-dom/server';
 import App from '../shared/App.js'
+import scss from '../shared/App.scss'; 
 
 const app = express()
 const port = 4000

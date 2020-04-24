@@ -1,0 +1,41 @@
+footer {}
+
+.footer__inner {
+	@include column(12); 
+
+	&:before {
+		@include divider_horizontal; 		
+	}
+
+	nav {
+		float: left;
+		width: 50%; 
+	}
+}
+
+.footer__links {
+	@include clearfix; 
+
+	margin: 1rem 0 0;
+}
+
+.footer__linkitem {
+	border-right: solid 2px; 
+	margin-right: $default-gutter * 2; 
+	padding-right: $default-gutter * 2; 
+	line-height: 1rem; 
+	float: left; 
+
+	&:last-child {
+		border-right: none; 
+		margin-right: 0; 
+		padding-right: 0; 
+	}
+}
+
+.footer__credit {
+	float: right; 
+	font-size: 0.75rem; 
+	line-height: 1rem; 
+	margin-top: 1rem; 
+}

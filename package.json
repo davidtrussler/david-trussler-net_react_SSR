@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -33,7 +34,9 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
     "nodemon": "^2.0.2",
+    "sass-loader": "^8.0.2",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-node-externals": "^1.7.2"
