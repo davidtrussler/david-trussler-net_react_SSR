@@ -7,6 +7,19 @@ Makes a build of my personal site in React, built from the ground up
 - run `npm install` so install all dependencies
 - run `npm start` to configure and start a development server
 
+## Branches
+
+### [Refines-basic-isomorphic-app](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/Refines-basic-isomorphic-app)
+
+- changes the directory structure to shared/server/client
+- Updates webpack.config to use const not var
+- Removes whitespace from around injected markup
+- Updates mode to 'development'
+- Sets webpack to watch files and restart node server on changes
+- Adds event listener
+  - just to experiment with how this is dealt with client/server side
+- Removes some unecessary modules
+
 ***
 
 ## Legacy Branches

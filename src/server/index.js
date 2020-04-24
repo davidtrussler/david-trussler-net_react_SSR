@@ -20,9 +20,7 @@ app.get('/', (req, res) => {
 				<script src="/bundle.js" defer></script>
 			</head>
 			<body>
-			  <div id="app">
-			  	${markup}
-			  </div>
+			  <div id="app">${markup}</div>
 			</body>
 		</html>
 	`)
