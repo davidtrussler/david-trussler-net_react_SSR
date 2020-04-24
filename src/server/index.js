@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
 			<head>
 				<meta charset="utf-8"/>
 				<title>React Example</title>
-				<script src="/bundle.js" defer></script>
 			</head>
 			<body>
 			  <div id="app">${markup}</div>
