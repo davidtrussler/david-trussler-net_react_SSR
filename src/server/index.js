@@ -3,14 +3,19 @@ import express from 'express'
 import ReactDOMServer from 'react-dom/server';
 import App from '../shared/App.js'
 import scss from '../shared/App.scss'; 
+import {StaticRouter} from 'react-router'; 
 
 const app = express()
 const port = 4000
 
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-  const markup = ReactDOMServer.renderToString(<App/>)
+app.get('*', (req, res) => {
+  const markup = ReactDOMServer.renderToString(
+  	<StaticRouter location={req.url}>
+	  	<App/>
+  	</StaticRouter>
+	)
 
 	res.send(`
 		<!doctype html>
