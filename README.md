@@ -9,6 +9,11 @@ Makes a build of my personal site in React, built from the ground up
 
 ## Branches
 
+### Adds-routing_Dybowski
+- installs react-router-dom
+
+### Adds davidtrussler.net homepage
+
 ### [Refines-basic-isomorphic-app](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/Refines-basic-isomorphic-app)
 
 - changes the directory structure to shared/server/client
