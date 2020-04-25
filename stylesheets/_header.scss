@@ -1,0 +1,25 @@
+header {
+	margin: 1rem 0; 
+}
+
+.header__inner {
+	@include column(12); 
+
+	margin-bottom: 1rem; 
+
+	&:after {
+		@include divider_horizontal; 
+	}
+}
+
+.header__title {
+	font-size: 4.375rem; 
+	line-height: .85; 
+	text-transform: lowercase;
+	margin-bottom: 1rem; 
+	float: left; 
+
+	// Forces word break
+	width: 0;
+	overflow: visible; 
+}

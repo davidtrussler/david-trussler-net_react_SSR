@@ -1,0 +1,18 @@
+.main-nav {
+	float: left;
+	margin-bottom: 1rem; 
+	text-transform: lowercase;
+	clear: left; 
+
+	@include respond-to($mq-s) {
+		float: right;
+		text-align: right; 		
+		clear: none; 
+	}
+}
+
+.main-nav__element {
+	font-size: 1.5rem;
+	line-height: 1.25;   
+	margin-bottom: 0; 
+}

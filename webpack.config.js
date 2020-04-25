@@ -12,7 +12,7 @@ const browserConfig = {
   mode: 'development', 
   module: {
     rules: [
-      { test: /\.(js)$/, use: 'babel-loader' },
+      { test: /\.(js)$/, use: 'babel-loader' }
     ]
   },
   plugins: [
@@ -34,7 +34,8 @@ const serverConfig = {
   mode: 'development', 
   module: {
     rules: [
-      { test: /\.(js)$/, use: 'babel-loader' }
+      { test: /\.(js)$/, use: 'babel-loader' }, 
+      { test: /\.(scss)$/, use: ['css-loader', 'sass-loader']}
     ]
   },
   plugins: [
@@ -44,4 +45,7 @@ const serverConfig = {
   ]
 }
 
-module.exports = [browserConfig, serverConfig]
+module.exports = [
+  browserConfig, 
+  serverConfig
+]

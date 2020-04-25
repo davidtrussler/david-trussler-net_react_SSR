@@ -2,6 +2,7 @@ import React from 'react'
 import express from 'express'
 import ReactDOMServer from 'react-dom/server';
 import App from '../shared/App.js'
+import scss from '../shared/App.scss'; 
 
 const app = express()
 const port = 4000
@@ -15,9 +16,10 @@ app.get('/', (req, res) => {
 		<!doctype html>
 		<html>
 			<head>
+				<title>David Trussler</title>
 				<meta charset="utf-8"/>
-				<title>React Example</title>
-				<script src="/bundle.js" defer></script>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<style>${scss}</style>
 			</head>
 			<body>
 			  <div id="app">${markup}</div>

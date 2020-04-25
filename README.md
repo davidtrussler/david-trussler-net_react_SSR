@@ -20,6 +20,8 @@ Makes a build of my personal site in React, built from the ground up
   - just to experiment with how this is dealt with client/server side
 - Removes some unecessary modules
 
+### [Rebuilds-dtnet-as-isomorphic-app](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/Rebuilds-dtnet-as-isomorphic-app)
+
 ***
 
 ## Legacy Branches
