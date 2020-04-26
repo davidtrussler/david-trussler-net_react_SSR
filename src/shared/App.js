@@ -1,16 +1,17 @@
 import React from 'react';
-import {Header} from '../components/Header'; 
-import {Main} from '../components/Main'; 
-import {Footer} from '../components/Footer'; 
+import {Route, Switch} from 'react-router-dom'; 
+import Home from './Home'; 
+import Music from './Music'; 
 
 const App = () => {
   return (
-    <React.Fragment>
-      <Header/>
-      <Main/>
-      <Footer/>
-    </React.Fragment>
-  )
+		<div>
+			<Switch>
+				<Route path="/music" component={Music} />
+				<Route path="/" component={Home} />
+			</Switch>
+		</div>
+	)
 }
 
 export default App
