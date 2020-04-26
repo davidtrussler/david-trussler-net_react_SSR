@@ -1,6 +1,6 @@
 import React from 'react';
-import {Image} from './Image'; 
-import {Anchor} from './Anchor'; 
+import {Image} from '../shared/Image'; 
+import {Anchor} from '../shared/Anchor'; 
 
 export function Main() {
 	return (
