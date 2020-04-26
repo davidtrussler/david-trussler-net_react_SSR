@@ -1,0 +1,33 @@
+.music__intro {
+	margin: 0 0 1rem;
+}
+
+.music__track {
+	margin-bottom: 1rem; 
+}
+
+.track__instruments {
+	@include clearfix;
+
+	background: $colour-grey; 
+	padding: 0.25rem; 
+	margin-bottom: 0.5rem; 
+}
+
+.track__instrument {
+	line-height: 1; 
+	margin-bottom: 0; 
+	float: left; 
+	padding-right: 0.5rem; 
+	margin-right: 0.5rem; 
+	border-right: solid 1px; 
+
+	&:last-child {
+		border-right: none; 
+	}
+}
+
+.track__img {
+	float: right;
+	margin: 0 0 0.25rem $default-gutter; 
+}
