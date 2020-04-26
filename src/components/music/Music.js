@@ -1,14 +1,13 @@
 import React from 'react';
 import {Header} from '../shared/Header'; 
+import {Main} from './Main'; 
 import {Footer} from '../shared/Footer'; 
 
 const Music = () => {
   return (
     <React.Fragment>
       <Header/>
-      <main>
-      	<p>Content for the music page goes here</p>
-      </main>
+      <Main/>
       <Footer/>
     </React.Fragment>
   )
