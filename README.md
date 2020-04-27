@@ -5,16 +5,35 @@ Makes a build of my personal site in React, built from the ground up
 ## Set up
 
 - run `npm install` so install all dependencies
-- run `npm start` to configure and start a development server
+- run `npm run dev` to configure and start a development server
 
 ## Branches
 
+### [Deploy](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/Deploy)
+
+- Makes some config updates for deployment
+  - adds node and npm versions to package.json
+  - adds start script for server to include a reference to the server port number
+  - updates the server file to reference the port number
+  - updates the webpack config to build in production mode
+
 ### [Adds-music-page](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/Adds-music-page)
 
-### Adds-routing_Dybowski
-- installs react-router-dom
+- Updates directory structure
+- Adds components for Music page markup
+- Adds styles for Music page
+- Adds assets for Music page
+
+### [Adds-routing_Dybowski](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/Adds-routing_Dybowski)
+- Installs react-router-dom
+- Creates new Home component from App component
+- Creates new Music component
+- Updates App component to include routing from react-router-dom library
+- Updates server to include StaticRouter component from react-router library
+- Updates client-side code to include BrowserRouter component from react-router-dom library
 
 ### Adds davidtrussler.net homepage
+
 
 ### [Refines-basic-isomorphic-app](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/Refines-basic-isomorphic-app)
 
