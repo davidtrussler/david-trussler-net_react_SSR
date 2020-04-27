@@ -1,5 +1,5 @@
 import React from 'react';
-import {Anchor} from '../components/Anchor'; 
+import {Anchor} from './Anchor'; 
 
 export function Nav() {
 	return (

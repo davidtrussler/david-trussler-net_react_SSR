@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom'; 
-import Home from './Home'; 
-import Music from './Music'; 
+import Home from '../components/home/Home'; 
+import Music from '../components/music/Music'; 
 
 const App = () => {
   return (

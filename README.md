@@ -9,6 +9,8 @@ Makes a build of my personal site in React, built from the ground up
 
 ## Branches
 
+### [Adds-music-page](https://github.com/davidtrussler/david-trussler-net_react_SSR/tree/Adds-music-page)
+
 ### Adds-routing_Dybowski
 - installs react-router-dom
 
