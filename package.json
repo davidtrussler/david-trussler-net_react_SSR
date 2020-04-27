@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Makes a build of my personal site in React, built from the ground up",
   "main": "index.js",
+  "engines": {
+    "node": "12.10.x",
+    "npm": "6.14.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack", 
