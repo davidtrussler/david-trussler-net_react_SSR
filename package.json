@@ -10,7 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack", 
-    "start": "node server.js -p $PORT"
+    "start": "node server.js -p $PORT", 
+    "dev": "webpack -w & nodemon server.js"
   },
   "repository": {
     "type": "git",
