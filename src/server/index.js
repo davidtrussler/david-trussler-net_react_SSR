@@ -34,5 +34,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(process.env.PORT, () => {
-  console.log(`Server is listening on port: %d in %s mode`, this.address().port, app.settings.env)
+  console.log(`Server is listening on port: %d`)
 })
