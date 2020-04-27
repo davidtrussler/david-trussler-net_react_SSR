@@ -6,6 +6,7 @@ import scss from '../shared/App.scss';
 import {StaticRouter} from 'react-router'; 
 
 const app = express()
+const port = process.env.PORT || 4000
 
 app.use(express.static('public'))
 
@@ -32,6 +33,6 @@ app.get('*', (req, res) => {
 	`)
 })
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server is listening on port: $PORT`)
+app.listen(port, () => {
+  console.log(`Server is listening on port: ${port}`)
 })
