@@ -20,8 +20,7 @@ export function Track(props) {
 			<p>{props.text}</p>
 
 			<audio controls>
-				<source src={`http://www.zen146343.zen.co.uk/davidtrussler/audio/${filename}.mp3`} type="audio/mpeg"/>
-				<source src={`http://www.zen146343.zen.co.uk/davidtrussler/audio/${filename}.ogg`} type="audio/ogg; codecs=&quot;vorbis&quot;"/> 
+				<source src={`audio/${filename}.mp3`} type="audio/mpeg"/>
 			</audio> 
 		</section>
 	)
