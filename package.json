@@ -1,7 +1,7 @@
 {
-  "name": "david-trussler-net_react_ssr",
+  "name": "davidtrussler-net",
   "version": "1.0.0",
-  "description": "Makes a build of my personal site in React, built from the ground up",
+  "description": "Personal site for David Trussler",
   "main": "index.js",
   "engines": {
     "node": "12.10.x",
