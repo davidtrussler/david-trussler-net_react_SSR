@@ -2,6 +2,11 @@ const path = require('path')
 const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals')
 
+
+/**
+ * All client side configuration is disabled for the preent 
+ * It si not currently being used and causes some issues with the PostGres database
+ *
 const browserConfig = {
   entry: './src/client/index.js',
   output: {
@@ -21,6 +26,7 @@ const browserConfig = {
     })
   ]
 }
+*/
 
 const serverConfig = {
   entry: './src/server/index.js',
@@ -46,6 +52,6 @@ const serverConfig = {
 }
 
 module.exports = [
-  browserConfig, 
+  // browserConfig, 
   serverConfig
 ]
