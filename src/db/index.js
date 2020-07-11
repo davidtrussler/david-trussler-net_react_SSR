@@ -1,9 +1,19 @@
 const { Client } = require('pg'); 
-const client = new Client({
-	user: 'davidtrussler',
-  host: 'localhost',
-  database: 'blog',
-  password: 'root'
+
+// const user = 'davidtrussler';
+// const host = 'localhost';
+// const database = 'postgresql-colorful-81881';
+// const password = 'root'; 
+// const port = '5432'; 
+// const connectionString = 'postgres://' + user + ':' + password + '@' + host + ':' + port + '/' + database; 
+const connectionString = 'postgres://dbfxyrdtlddylg:9bfedda067aea7c8d2fa3bf1608665ffb274454b9297afdc73ec9887cf69718e@ec2-54-75-244-161.eu-west-1.compute.amazonaws.com:5432/d5telim30j1g04'; 
+// const connectionString = 'postgres://localhost:5432/postgresql-colorful-81881'; 
+// const connectionString = 'blog'; 
+let client = new Client({
+	connectionString: connectionString
+	// ssl: {
+	// 	rejectUnauthorized: false
+	// }
 }); 
 
 client.connect(); 

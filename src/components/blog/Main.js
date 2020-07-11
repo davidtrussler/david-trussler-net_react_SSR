@@ -1,7 +1,6 @@
 import React from 'react';
 
-const db = require('../../db'); 
-
+let db = require('../../db'); 
 let rows = db.getPosts(); 
 
 export function Main() {
