@@ -11,7 +11,7 @@ const { Client } = require('pg');
 // const connectionString = 'postgres://localhost:5432/postgresql-colorful-81881'; 
 // const connectionString = 'blog'; 
 let client = new Client({
-	connectionString: process.env.DATABASE_URL
+	connectionString: 'postgres://localhost:5432/postgresql-colorful-81881' // process.env.DATABASE_URL
 	// ssl: {
 	// 	rejectUnauthorized: false
 	// }
