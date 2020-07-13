@@ -9,8 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack", 
-    "start": "node server.js -p $PORT", 
+    "build": "webpack",
+    "start": "node server.js -p $PORT",
     "dev": "webpack -w & nodemon server.js"
   },
   "repository": {
@@ -30,6 +30,7 @@
     ]
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "node-sass": "^4.13.1",
     "pg": "^8.2.1",

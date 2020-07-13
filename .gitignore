@@ -2,3 +2,4 @@
 public/bundle.js
 src/client/index.js
 server.js
+.env
