@@ -1,50 +1,27 @@
 require('dotenv').config(); 
 
 const {Client} = require('pg'); 
+const query = 'SELECT * FROM posts;';  
 
-// const client = new Client({
-// 	connectionString: process.env.DATABASE_URL
-// }); 
+let client = new Client({
+	connectionString: process.env.DATABASE_URL
+}); 
 
-// client.connect(); 
+client.connect(); 
 
-const getPosts = () => {
-	console.log('getPosts!'); 
+let getPosts = () => {
+	return new Promise(function(resolve, reject) {
+		client.query(query, (err, res) => {
+			if (err) {
+				console.log(err.stack); 
+			} else {
+				console.log('res: ', res.rows); 
+				resolve(res.rows); 
+			}
 
-	let client = new Client({
-		connectionString: process.env.DATABASE_URL
-	}); 
-
-	// console.log('client: ', client); 
-
-	client.connect(); 
-
-	let rows = []; 
-
-	client.query('SELECT * FROM posts;', (err, res) => {
-		if (err) throw err;
-
-		// console.log('result: ', res.rows); 
-
-		res.rows.forEach(function(row) {
-			// console.log('row: ', row); 
-			rows.push(row); 
+			// client.end();
 		}); 
-
-		// for (let row of res.rows) {
-		// 	rows.push(row); 
-		// }
-
-		client.end();
-
-		// console.log('rows: ', rows); 
-
-	  return rows; 
-	});
-
-	// return 'hello'; 
-
-  return rows; 
+	}); 
 }
 
 module.exports = {
