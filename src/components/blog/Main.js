@@ -1,25 +1,43 @@
-import React from 'react';
-
-let rows = []; 
+import React, { Component } from 'react';
 
 const db = require('../../db'); 
 
-db.getPosts().then(response => rows = response); 
+export class Main extends Component {
+	constructor() {
+		super(); 
 
-export function Main() {
-	return (
-		<main>
-			<div className="constrained">
-				<div className="main__inner">
-					<p>Content for the main section of the blog landing page goes here.</p>
+		this.state = {
+			rows = []
+		}
+	}
 
-					<ul>
-						{rows.map(
-							(post, i) => <li key={i}>{post.date}: {post.title}</li>
-						)}
-					</ul>
+	render() {
+		let _this = this;
+
+		db.getPosts().then(function(response) {
+			response.forEach(function(row) {
+				console.log('row: ', row); 
+
+				_this.setState({
+					rows = response
+				}); 
+			}); 
+		})
+
+		return (
+			<main>
+				<div className="constrained">
+					<div className="main__inner">
+						<p>Content for the main section of the blog landing page goes here.</p>
+
+						<ul>
+							{this.state.rows.map(
+								(post, i) => <li key={i}>{post.date}: {post.title}</li>
+							)}
+						</ul>
+					</div>
 				</div>
-			</div>
-		</main>
-	)
+			</main>
+		)
+	}
 }
