@@ -7,7 +7,7 @@ export class Main extends Component {
 		super(); 
 
 		this.state = {
-			rows = []
+			rows: []
 		}
 	}
 
@@ -19,7 +19,7 @@ export class Main extends Component {
 				console.log('row: ', row); 
 
 				_this.setState({
-					rows = response
+					rows: response
 				}); 
 			}); 
 		})
