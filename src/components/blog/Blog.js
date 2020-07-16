@@ -3,7 +3,7 @@ import {Header} from '../shared/Header';
 import {Main} from './Main'; 
 import {Footer} from '../shared/Footer'; 
 
-const Reviews = () => {
+const Blog = () => {
   return (
     <React.Fragment>
       <Header/>
@@ -13,4 +13,4 @@ const Reviews = () => {
   )
 }
 
-export default Reviews
+export default Blog
