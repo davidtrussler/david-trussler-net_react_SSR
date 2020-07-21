@@ -1,15 +1,16 @@
 import React from 'react'
 import express from 'express'
 import { createStore } from 'redux'; 
-import configureStore from '../store/configureStore'
+// import configureStore from '../store/configureStore'
 import { Provider } from 'react-redux';
-// import dtNet from './reducers';
+// import { createStore } from '../store'; 
+import {modelReducer} from '../store/modelReducer'; 
 import ReactDOMServer from 'react-dom/server';
 import App from '../shared/App.js'
 import scss from '../shared/App.scss'; 
 import { StaticRouter } from 'react-router'; 
 
-const store = configureStore(); 
+// const store = configureStore(); 
 const app = express(); 
 const port = process.env.PORT || 4000; 
 
@@ -23,7 +24,7 @@ function handleRender(req, res) {
 	console.log('handleRender!'); 
 
 	// Creates new Redux store instance
-	const store = createStore(store); 
+	const store = createStore(modelReducer); 
 
 	// Render component to string
   const markup = ReactDOMServer.renderToString(
