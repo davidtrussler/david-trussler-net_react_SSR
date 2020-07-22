@@ -4,6 +4,8 @@ import ReactDOMServer from 'react-dom/server';
 import App from '../shared/App.js'
 import scss from '../shared/App.scss'; 
 import { StaticRouter } from 'react-router'; 
+import { getPosts } from '../db'; 
+import dataStore from '../store'; 
 
 const app = express(); 
 const port = process.env.PORT || 4000; 
@@ -17,18 +19,23 @@ app.use(handleRender);
 function handleRender(req, res) {
 	console.log('handleRender!'); 
 
-	// Render component to string
-  const markup = ReactDOMServer.renderToString(
-  	<StaticRouter location={req.url}>
-	  	<App/>
-  	</StaticRouter>
-	)
+	getPosts().then(response => {
+		// Add response to dataStore
+		console.log('response: ', response); 
 
-	res.send(renderFullPage(markup)); 
+		// Render component to string
+	  const markup = ReactDOMServer.renderToString(
+	  	<StaticRouter location={req.url}>
+		  	<App />
+	  	</StaticRouter>
+		)
+
+		res.send(renderFullPage(markup)); 
+	}); 
 }; 
 
 function renderFullPage(markup) {
-	console.log('renderFullPage')
+	console.log('renderFullPage!')
 
 	return `
 		<!doctype html>
