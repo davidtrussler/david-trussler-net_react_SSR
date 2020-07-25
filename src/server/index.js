@@ -4,8 +4,11 @@ import ReactDOMServer from 'react-dom/server';
 import App from '../shared/App.js'
 import scss from '../shared/App.scss'; 
 import { StaticRouter } from 'react-router'; 
-import { getPosts } from '../db'; 
-import dataStore from '../store'; 
+import { createStore } from 'redux'; 
+import dbReducer from '../store/dbReducer'; 
+// import { getPosts } from '../db'; 
+// import initialData from '../store/initialData';
+// import dataStore from '../store'; 
 
 const app = express(); 
 const port = process.env.PORT || 4000; 
@@ -19,10 +22,25 @@ app.use(handleRender);
 function handleRender(req, res) {
 	console.log('handleRender!'); 
 
-	getPosts().then(response => {
-		// Add response to dataStore
-		console.log('response: ', response); 
+  const data = (dbReducer) => {
+		return new Promise(function(resolve, reject) {
+			createStore(dbReducer);
+		})
+  }
 
+  data().then(response => {
+  	console.log('response: ', response); 
+  })
+
+  // createStore; // .then(data => {
+	  	// console.log('state: ', state); 
+	  // })
+
+	  console.log('data: ', data); 
+		
+	// getPosts().then(response => {
+		// Add response to dataStore
+		// console.log('response: ', response); 
 		// Render component to string
 	  const markup = ReactDOMServer.renderToString(
 	  	<StaticRouter location={req.url}>
@@ -31,7 +49,7 @@ function handleRender(req, res) {
 		)
 
 		res.send(renderFullPage(markup)); 
-	}); 
+	// }); 
 }; 
 
 function renderFullPage(markup) {
