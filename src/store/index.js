@@ -1,4 +1,4 @@
 import { createStore } from 'redux'; 
-import modelReducer from './modelReducer'; 
+import dbReducer from './dbReducer'; 
 
-export default createStore(modelReducer); 
+export default createStore(dbReducer); 

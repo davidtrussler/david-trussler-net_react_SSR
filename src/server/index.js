@@ -6,9 +6,7 @@ import scss from '../shared/App.scss';
 import { StaticRouter } from 'react-router'; 
 import { createStore } from 'redux'; 
 import dbReducer from '../store/dbReducer'; 
-// import { getPosts } from '../db'; 
-// import initialData from '../store/initialData';
-// import dataStore from '../store'; 
+import { fetchData } from '../db'; 
 
 const app = express(); 
 const port = process.env.PORT || 4000; 
@@ -22,26 +20,36 @@ app.use(handleRender);
 function handleRender(req, res) {
 	console.log('handleRender!'); 
 
-  const data = (dbReducer) => {
-		return new Promise(function(resolve, reject) {
-			createStore(dbReducer);
-		})
-  }
+  // const data = (dbReducer) => {
+		// return new Promise(function(resolve, reject) {
+		// 	createStore(dbReducer);
+		// })
+  // }
 
-  data().then(response => {
-  	console.log('response: ', response); 
-  })
+  // data().then(response => {
+  // 	console.log('response: ', response); 
+  // })
 
   // createStore; // .then(data => {
 	  	// console.log('state: ', state); 
 	  // })
 
-	  console.log('data: ', data); 
+  // console.log('data: ', data); 
 		
 	// getPosts().then(response => {
 		// Add response to dataStore
 		// console.log('response: ', response); 
 		// Render component to string
+
+	fetchData((data) => {
+		const dataStore = createStore(dbReducer); 
+
+		// Add response data to store
+		dataStore.dispatch({
+			type: 'POSTS_UPDATED', 
+			payload: data
+		}); 
+
 	  const markup = ReactDOMServer.renderToString(
 	  	<StaticRouter location={req.url}>
 		  	<App />
@@ -49,7 +57,7 @@ function handleRender(req, res) {
 		)
 
 		res.send(renderFullPage(markup)); 
-	// }); 
+	})
 }; 
 
 function renderFullPage(markup) {
