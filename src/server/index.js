@@ -18,13 +18,23 @@ app.use(express.static('public'));
 app.use(handleRender); 
 
 function handleRender(req, res) {
-	fetchPosts(data => {
-		// Add response data to store
-		dataStore.dispatch({
-			type: 'POSTS_UPDATED', 
-			payload: data
-		}); 
+  if (req.url === '/blog') {
+		fetchPosts(data => {
+			// Add response data to store
+			dataStore.dispatch({
+				type: 'POSTS_UPDATED', 
+				payload: data
+			}); 
 
+		  const markup = ReactDOMServer.renderToString(
+		  	<StaticRouter location={req.url}>
+			  	<App />
+		  	</StaticRouter>
+			)
+
+			res.send(renderFullPage(markup)); 
+		})
+  } else {
 	  const markup = ReactDOMServer.renderToString(
 	  	<StaticRouter location={req.url}>
 		  	<App />
@@ -32,7 +42,7 @@ function handleRender(req, res) {
 		)
 
 		res.send(renderFullPage(markup)); 
-	})
+  }
 }; 
 
 function renderFullPage(markup) {
