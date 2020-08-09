@@ -1,12 +1,12 @@
 import React from 'react'
-import express from 'express'
 import ReactDOMServer from 'react-dom/server';
-import App from '../shared/App.js'
-import scss from '../shared/App.scss'; 
+import express from 'express'
 import { StaticRouter } from 'react-router'; 
 import { createStore } from 'redux'; 
+import { fetchPosts } from '../db'; 
 import dbReducer from '../store/dbReducer'; 
-import { fetchData } from '../db'; 
+import App from '../shared/App.js'
+import scss from '../shared/App.scss'; 
 
 const app = express(); 
 const port = process.env.PORT || 4000; 
@@ -20,28 +20,7 @@ app.use(handleRender);
 function handleRender(req, res) {
 	console.log('handleRender!'); 
 
-  // const data = (dbReducer) => {
-		// return new Promise(function(resolve, reject) {
-		// 	createStore(dbReducer);
-		// })
-  // }
-
-  // data().then(response => {
-  // 	console.log('response: ', response); 
-  // })
-
-  // createStore; // .then(data => {
-	  	// console.log('state: ', state); 
-	  // })
-
-  // console.log('data: ', data); 
-		
-	// getPosts().then(response => {
-		// Add response to dataStore
-		// console.log('response: ', response); 
-		// Render component to string
-
-	fetchData((data) => {
+	fetchPosts(data => {
 		const dataStore = createStore(dbReducer); 
 
 		// Add response data to store

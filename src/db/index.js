@@ -1,50 +1,39 @@
-// require('dotenv').config(); 
+require('dotenv').config(); 
 
-// const {Client} = require('pg'); 
-// const query = 'SELECT * FROM posts;';  
+const {Client} = require('pg'); 
+const query = 'SELECT * FROM posts;';  
 
-// let client = new Client({
-// 	connectionString: process.env.DATABASE_URL
-// }); 
+let client = new Client({
+	connectionString: process.env.DATABASE_URL
+}); 
 
-// client.connect(); 
-
-// let getPosts = () => {
-// 	return new Promise(function(resolve, reject) {
-// 		client.query(query, (err, res) => {
-// 			if (err) {
-// 				console.log(err.stack); 
-// 			} else {
-// 				// console.log('res: ', res.rows); 
-// 				resolve(res.rows); 
-// 			}
-
-// 			// client.end();
-// 		}); 
-// 	}); 
-// }
-
-// const fetchData = (callback) => {
-// 	console.log('fetchData!'); 
-
-// 	callback(
-// 		function() {
-// 			return {date: 'Wednesday', title: 'A very bad post'};
-// 		}
-// 	)
-// }
+client.connect(); 
 
 function getPosts() {
-  return {posts: [{date: 'Wednesday', title: 'A very bad post'}]};
+	return new Promise((resolve, reject) => {
+		client.query(query, (err, res) => {
+			if (err) {
+				console.log(err.stack); 
+			} else {
+				// console.log('res: ', res.rows); 
+				resolve(res.rows); 
+			}
+		})
+	})
 }
 
-export function fetchData(callback) {
-  setTimeout(() => {
-    callback(getPosts())
-  }, 2000)
+function fetchPosts(callback) {
+	console.log('fetchPosts!'); 
+
+	getPosts().then((response) => {
+		console.log('response: ', response)
+
+		callback(
+			{posts: response}
+		)
+	})
 }
 
-// module.exports = {
-//   getPosts, 
-//   fetchData
-// }
+module.exports = {
+  fetchPosts
+}
