@@ -18,8 +18,6 @@ app.use(express.static('public'));
 app.use(handleRender); 
 
 function handleRender(req, res) {
-	console.log('handleRender!'); 
-
 	fetchPosts(data => {
 		// Add response data to store
 		dataStore.dispatch({
@@ -38,8 +36,6 @@ function handleRender(req, res) {
 }; 
 
 function renderFullPage(markup) {
-	console.log('renderFullPage!')
-
 	return `
 		<!doctype html>
 		<html>

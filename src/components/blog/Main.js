@@ -1,8 +1,6 @@
 import React from 'react';
 
 export function Main(posts) {
-	console.log('Main called'); 
-
 	return (
 		<main>
 			<div className="constrained">

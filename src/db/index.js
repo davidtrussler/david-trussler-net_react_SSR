@@ -15,7 +15,6 @@ function getPosts() {
 			if (err) {
 				console.log(err.stack); 
 			} else {
-				// console.log('res: ', res.rows); 
 				resolve(res.rows); 
 			}
 		})
@@ -23,11 +22,7 @@ function getPosts() {
 }
 
 function fetchPosts(callback) {
-	console.log('fetchPosts!'); 
-
 	getPosts().then((response) => {
-		console.log('response: ', response)
-
 		callback(
 			{posts: response}
 		)
