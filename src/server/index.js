@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOMServer from 'react-dom/server';
 import express from 'express'
 import { StaticRouter } from 'react-router'; 
-import { createStore } from 'redux'; 
 import { fetchPosts } from '../db'; 
+import dataStore from '../store'; 
 import dbReducer from '../store/dbReducer'; 
 import App from '../shared/App.js'
 import scss from '../shared/App.scss'; 
@@ -21,8 +21,6 @@ function handleRender(req, res) {
 	console.log('handleRender!'); 
 
 	fetchPosts(data => {
-		const dataStore = createStore(dbReducer); 
-
 		// Add response data to store
 		dataStore.dispatch({
 			type: 'POSTS_UPDATED', 

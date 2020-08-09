@@ -2,7 +2,6 @@ import React from 'react';
 import { Header } from '../shared/Header'; 
 import { Main } from './Main'; 
 import { Footer } from '../shared/Footer'; 
-// import { Provider } from 'react-redux'; 
 import dataStore from '../../store'; 
 
 const Blog = () => {
