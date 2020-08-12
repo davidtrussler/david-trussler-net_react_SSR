@@ -21,11 +21,16 @@ function handleRender(req, res) {
   if (req.url === '/blog') {
 		fetchPosts(data => {
 			// Add response data to store
-			dataStore.dispatch({
-				type: 'POSTS_UPDATED', 
-				payload: data
-			}); 
-
+			if (data.posts.name === 'error') {
+				let error = new Error(data.posts); 
+				console.log(error); 
+			} else {
+				dataStore.dispatch({
+					type: 'POSTS_UPDATED', 
+					payload: data
+				}); 
+			}
+			
 		  const markup = ReactDOMServer.renderToString(
 		  	<StaticRouter location={req.url}>
 			  	<App />
