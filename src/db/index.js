@@ -4,7 +4,10 @@ const {Client} = require('pg');
 const query = 'SELECT * FROM posts;';
 
 let client = new Client({
-	connectionString: process.env.DATABASE_URL
+	// Connect to database on main app
+	// connectionString: process.env.DATABASE_URL
+	// Connect to database on dt-net-redux-server-sid-rivskk
+	connectionString: process.env.HEROKU_POSTGRESQL_PINK_URL
 }); 
 
 client.connect(); 
