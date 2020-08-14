@@ -5,9 +5,9 @@ const query = 'SELECT * FROM posts;';
 
 let client = new Client({
 	// Connect to database on main app
-	// connectionString: process.env.DATABASE_URL
+	connectionString: process.env.DATABASE_URL
 	// Connect to database on dt-net-redux-server-sid-rivskk
-	connectionString: process.env.HEROKU_POSTGRESQL_PINK_URL
+	// connectionString: process.env.HEROKU_POSTGRESQL_PINK_URL
 }); 
 
 client.connect(); 
