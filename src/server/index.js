@@ -1,23 +1,57 @@
 import React from 'react'
-import express from 'express'
 import ReactDOMServer from 'react-dom/server';
+import express from 'express'
+import { StaticRouter } from 'react-router'; 
+import { fetchPosts } from '../db'; 
+import dataStore from '../store'; 
+import dbReducer from '../store/dbReducer'; 
 import App from '../shared/App.js'
 import scss from '../shared/App.scss'; 
-import {StaticRouter} from 'react-router'; 
 
-const app = express()
-const port = process.env.PORT || 4000
+const app = express(); 
+const port = process.env.PORT || 4000; 
 
-app.use(express.static('public'))
+// Seve static files
+app.use(express.static('public')); 
 
-app.get('*', (req, res) => {
-  const markup = ReactDOMServer.renderToString(
-  	<StaticRouter location={req.url}>
-	  	<App/>
-  	</StaticRouter>
-	)
+// Fired every time the server receives a request
+app.use(handleRender); 
 
-	res.send(`
+function handleRender(req, res) {
+  if (req.url === '/blog') {
+		fetchPosts(data => {
+			// Add response data to store
+			if (data.posts.name === 'error') {
+				let error = new Error(data.posts); 
+				console.log(error); 
+			} else {
+				dataStore.dispatch({
+					type: 'POSTS_UPDATED', 
+					payload: data
+				}); 
+			}
+			
+		  const markup = ReactDOMServer.renderToString(
+		  	<StaticRouter location={req.url}>
+			  	<App />
+		  	</StaticRouter>
+			)
+
+			res.send(renderFullPage(markup)); 
+		})
+  } else {
+	  const markup = ReactDOMServer.renderToString(
+	  	<StaticRouter location={req.url}>
+		  	<App />
+	  	</StaticRouter>
+		)
+
+		res.send(renderFullPage(markup)); 
+  }
+}; 
+
+function renderFullPage(markup) {
+	return `
 		<!doctype html>
 		<html>
 			<head>
@@ -30,8 +64,8 @@ app.get('*', (req, res) => {
 			  <div id="app">${markup}</div>
 			</body>
 		</html>
-	`)
-})
+	`
+}; 
 
 app.listen(port, () => {
   console.log(`Server is listening on port: ${port}`)
