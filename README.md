@@ -11,4 +11,4 @@ My personal site, built as a server rendered React app
 
 The site uses a PostgreSQL database
 
-- Download and install with [Homebrew](https://formulae.brew.sh/formula/postgresql@9.5#default)
+- Download and install from [here](https://www.postgresql.org/)
