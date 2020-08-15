@@ -6,6 +6,7 @@ My personal site, built as a server rendered React app
 
 - run `npm install` so install all dependencies
 - run `npm run dev` to configure and start a development server
+- run `cp .env-example .env` and update with local environment values
 
 ## Database
 
