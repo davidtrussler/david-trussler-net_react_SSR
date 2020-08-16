@@ -1,4 +1,5 @@
 import React from 'react';
+import { Listing } from './Listing'; 
 
 function renderPosts(posts) {
 	if (posts === undefined) {
@@ -6,11 +7,18 @@ function renderPosts(posts) {
 			<p>There are no posts in this blog</p>
 		)
 	} else {
+		let options = {day: 'numeric', month: 'long', year: 'numeric'}; 
+
 		return (
 			<ul>
 			{
 				posts.map((post, i) => 
-					<li key={i}>{post.date}: {post.title}</li>
+					<Listing 
+						options={options}
+						timestamp={post.timestamp} 
+						title={post.title}
+						key='post_{i}'
+					/>
 				)
 			}
 			</ul>
