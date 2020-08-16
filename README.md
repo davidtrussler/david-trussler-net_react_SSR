@@ -6,10 +6,11 @@ My personal site, built as a server rendered React app
 
 - run `npm install` so install all dependencies
 - run `npm run dev` to configure and start a development server
-- run `cp .env-example .env` and update with local environment values
 
 ## Database
 
 The site uses a PostgreSQL database
 
 - Download and install from [here](https://www.postgresql.org/)
+- run `cp .env-example .env` 
+- update `.env` with local database connection values
