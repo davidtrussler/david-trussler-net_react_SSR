@@ -1,7 +1,6 @@
 require('dotenv').config(); 
 
 const {Client} = require('pg'); 
-const query = 'SELECT postid, timestamp, title FROM posts ORDER BY timestamp DESC;';
 
 let client = new Client({
 	// Connect to database on main app
@@ -12,7 +11,9 @@ let client = new Client({
 
 client.connect(); 
 
-function getPosts() {
+function fetchAllPosts(callback) {
+	const query = 'SELECT postid, timestamp, title FROM posts ORDER BY timestamp DESC;';
+	
 	return new Promise((resolve, reject) => {
 		client.query(query, (err, res) => {
 			if (err) {
@@ -21,19 +22,36 @@ function getPosts() {
 				resolve(res.rows); 
 			}
 		})
-	}).catch(reject => {
-		return reject; 
-	})
-}
-
-function fetchPosts(callback) {
-	getPosts().then((response) => {
+	}).then((response) => {
 		callback(
 			{posts: response}
 		)
-	}).catch()
+	}).catch(reject => {
+		return reject;
+	})
+}
+
+function fetchSinglePost(postid, callback) {
+	const query = 'SELECT timestamp, title, body FROM posts WHERE postid=' + postid;
+	
+	return new Promise((resolve, reject) => {
+		client.query(query, (err, res) => {
+			if (err) {
+				reject(err); 
+			} else {
+				resolve(res.rows); 
+			}
+		})
+	}).then((response) => {
+		callback(
+			response[0]
+		)
+	}).catch(reject => {
+		return reject;
+	})
 }
 
 module.exports = {
-  fetchPosts
+  fetchAllPosts, 
+  fetchSinglePost
 }
