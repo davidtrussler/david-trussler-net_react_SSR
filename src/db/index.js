@@ -1,7 +1,7 @@
 require('dotenv').config(); 
 
 const {Client} = require('pg'); 
-const query = 'SELECT timestamp, title FROM posts ORDER BY timestamp DESC;';
+const query = 'SELECT postid, timestamp, title FROM posts ORDER BY timestamp DESC;';
 
 let client = new Client({
 	// Connect to database on main app

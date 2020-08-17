@@ -7,16 +7,14 @@ function renderPosts(posts) {
 			<p>There are no posts in this blog</p>
 		)
 	} else {
-		let options = {day: 'numeric', month: 'long', year: 'numeric'}; 
-
 		return (
 			<ul>
 			{
 				posts.map((post, i) => 
 					<Listing 
-						options={options}
 						timestamp={post.timestamp} 
 						title={post.title}
+						postid={post.postid}
 						key='post_{i}'
 					/>
 				)
