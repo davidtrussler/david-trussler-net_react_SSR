@@ -31,7 +31,10 @@ export function Main(posts) {
 		<main>
 			<div className="constrained">
 				<div className="main__inner">
-					<p>Content for the main section of the blog landing page goes here.</p>
+					<h2>Blog</h2>
+
+					<p>I blog on web development, politics, music and football, sometimes all at once. Enjoy.</p>
+
 					{renderPosts(posts.posts)}
 				</div>
 			</div>
