@@ -1,0 +1,30 @@
+UPDATE posts SET body = '
+{
+	"paras": [
+		{"text": "Two recent high-profile incidents in English football have raised the spectre once again of racism in the sport. One is the forthcoming trial of Chelsea\u2019s John Terry on charges of racially abusing an opponent. The other is the similar incident involving Luis Su\u00E1rez and Patrice Evra of Liverpool and Manchester United respectively."}, 
+		{"text": "The first of these became even more significant when it apparently forced the resignation of the coach of the English national team, Fabio Capello, over the decision of the FA to strip Terry of the captaincy pending his trial. The latter incident became even more highly-charged yesterday when, only a few days after Su\u00E1rez completed an eight-match ban for the incident, Liverpool and Manchester United met in a League match and Su\u00E1rez refused the customary pre-match handshake with Evra. This brought harsh words from United manager Alex Ferguson, who went on to suggest that Liverpool Football Club have a particular problem with racism. Liverpool manager Kenny Dalglish on the other hand continued to support his player."}, 
+		{"text": "As a football club, Liverpool certainly have a case to answer. The insistence, by Dalglish in particular, that Su\u00E1rez remained innocent throughout all the proceedings was shameful and made the situation worse. The response of the club has continued to be one of playing the victim. When the squad and manager emerged pre-match in t-shirts proclaiming their support for the player shortly after the ban was imposed one\u2019s heart could only sink with the recognition that the club just didn\u2019t get it. Their actions have done much to ensure that racism has been shown to be alive within football despite the efforts of many and the very real progress the game has made over the last couple of decades."}, 
+		{"text": [
+		 {"fragment": "For me, and this appeared to be what Ferguson had in mind when he spoke of the history of racism in Liverpool, my mind went back some twenty three years and the publication of "}, 
+		 {"anchor": {
+			  "href": "https://shop.wsc.co.uk/out-of-his-skin.html", 
+			  "class": "inlineTitle", 
+			  "link": "Out of His Skin", 
+			  "target": "_blank"
+			}}, 
+		 {"fragment": ", by Dave Hill. This fine book, republished by WSC Books in 2001, described the arrival of John Barnes at Anfield and cleverly interwove this with Barnes\u2019 relatively privileged upbringing, the history of Liverpool as a port with its connections to the slave trade and the city\u2019s accompanying racism, which manifested itself in two clubs\u2014Everton as well as Liverpool\u2014who were always painfully slow to accept black players as part of the modern game. The significance, at the time, of Liverpool signing a black player (though Barnes was not in fact the first) is hard to imagine today. The books tells of Liverpool fans going to games at Goodison Park rather than watch their team field a black player. And the cover shows Barnes deftly back-heeling a banana from the pitch which had been thrown at him from the crowd."}
+		]}, 
+		{"text": [
+			{"fragment": "The book caused quite some unease at Liverpool Football Club on its publication. Quotes from Kop hero Tommy Smith which appeared in the book particularly illustrate the problem. In an interview he gave to Hill, his casual racism was shocking and, in an "}, 
+			{"anchor": {
+			  "href": "https://www.wsc.co.uk/the-archive/104-Race/3189-barnes-storm", 
+			  "link": "introduction to the new edition", 
+			  "target": "_blank"
+			}}, 
+			{"fragment": ", Hill describes how both Smith and Liverpool chairman at the time Peter Robinson responded. Smith threatened legal action, whilst remaining bewildered as to what he had actually done wrong, whilst Robinson declined to speak to him saying \u201Cwhen someone throws a brick through your window, you don\u2019t invite them in for a cup of tea\u201D."}
+		]}, 
+		{"text": "It is alarming how, despite the giant strides that have been made since, the Su\u00E1rez incident suggest some of the fundamental problems remain. The parallels with Dalglish today are uneasy to say the least. The siege mentality that has sprung up at the club, their insistence on themselves and their player as being the victim in the whole affair and, above all, their seeming to remain unaware that they have done anything wrong make uncomfortable parallels with those far off, shameful days."}, 
+		{"text": "Never has there been a more appropriate time for that book to be re-read."}
+	]
+}
+' WHERE postid=1;

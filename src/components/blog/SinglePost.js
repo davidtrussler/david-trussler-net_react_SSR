@@ -1,8 +1,38 @@
 import React from 'react';
+import { Anchor } from '../shared/Anchor'; 
 
 export function SinglePost(props) {
 	const timestamp = new Date(props.post.timestamp); 
 	const options = {day: 'numeric', month: 'long', year: 'numeric'}; 
+	const renderBody = (bodyObj) => {
+		return (
+			<React.Fragment>
+				{bodyObj.paras.map((para, i) => {
+					if (typeof para.text == 'string') {
+						return <p key='para_{i}'>{para.text}</p>;
+					} else {
+						return (
+							<p key='para_{i}'>
+							{para.text.map((text, i) => {
+								if (text.fragment) {
+									return text.fragment 
+								} else if (text.anchor) {
+									return <Anchor
+										key={i}
+										href={text.anchor.href}
+										target={text.anchor.target}
+										link={text.anchor.link}
+										class={text.anchor.class}
+									/>; 
+								}
+							})}
+							</p>
+						)
+					}
+				})} 
+			</React.Fragment>
+		)
+	}
 
 	return (
 		<React.Fragment>
@@ -14,7 +44,7 @@ export function SinglePost(props) {
 
 			<p>{Intl.DateTimeFormat('en-GB', options).format(timestamp)}</p>
 
-			<p>{props.post.body}</p>
+			{ renderBody(JSON.parse(props.post.body)) }
 		</React.Fragment>
 	)	
 }
