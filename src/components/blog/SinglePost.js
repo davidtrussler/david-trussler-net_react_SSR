@@ -1,5 +1,6 @@
 import React from 'react';
 import { Anchor } from '../shared/Anchor'; 
+import { Span } from '../shared/Span'; 
 
 export function SinglePost(props) {
 	const timestamp = new Date(props.post.timestamp); 
@@ -24,6 +25,11 @@ export function SinglePost(props) {
 										link={text.anchor.link}
 										class={text.anchor.class}
 									/>; 
+								} else if (text.span) {
+									return <Span
+										class={text.span.class}
+										text={text.span.text}
+									/>
 								}
 							})}
 							</p>
