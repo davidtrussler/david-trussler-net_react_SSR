@@ -10,7 +10,7 @@ function renderPosts(posts) {
 					timestamp={post.timestamp} 
 					title={post.title}
 					postid={post.postid}
-					key='post_{i}'
+					index={i}
 				/>
 			)
 		}
