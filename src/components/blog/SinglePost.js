@@ -39,6 +39,26 @@ export function SinglePost(props) {
 			</React.Fragment>
 		)
 	}
+	const renderTitle = (titleObj) => {
+		if (typeof titleObj.text == 'string') {
+			return <h2>{titleObj.text}</h2>
+		} else {
+			return (
+				<h2>
+					{titleObj.text.map(text => {
+						if (text.fragment) {
+							return text.fragment
+						} else if (text.span) {
+							return <Span
+								class={text.span.class}
+								text={text.span.text}
+							/>
+						}
+					})}
+				</h2>
+			)
+		}
+	}
 
 	return (
 		<React.Fragment>
@@ -46,7 +66,7 @@ export function SinglePost(props) {
 				<a href="/blog">Back to all posts</a>
 			</p>
 
-			<h2 dangerouslySetInnerHTML={{__html: props.post.title}} />
+			{ renderTitle(JSON.parse(props.post.title)) }
 
 			<p>{Intl.DateTimeFormat('en-GB', options).format(timestamp)}</p>
 
