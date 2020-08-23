@@ -1,5 +1,6 @@
 /node_modules
 public/bundle.js
 src/client/index.js
+src/db/*.sql
 server.js
 .env
