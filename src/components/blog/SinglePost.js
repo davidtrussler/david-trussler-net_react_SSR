@@ -10,10 +10,10 @@ export function SinglePost(props) {
 			<React.Fragment>
 				{bodyObj.paras.map((para, i) => {
 					if (typeof para.text == 'string') {
-						return <p key='para_{i}'>{para.text}</p>;
+						return <p key='para_{i}' className={para.class}>{para.text}</p>;
 					} else {
 						return (
-							<p key='para_{i}'>
+							<p key='para_{i}' className={para.class}>
 							{para.text.map((text, i) => {
 								if (text.fragment) {
 									return text.fragment 
