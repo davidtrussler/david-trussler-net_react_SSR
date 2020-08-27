@@ -1,6 +1,7 @@
 import React from 'react';
 import { Anchor } from '../shared/Anchor'; 
 import { Span } from '../shared/Span'; 
+import { UnorderedList } from '../shared/UnorderedList'; 
 
 export function SinglePost(props) {
 	const timestamp = new Date(props.post.timestamp); 
@@ -29,6 +30,11 @@ export function SinglePost(props) {
 									return <Span
 										class={text.span.class}
 										text={text.span.text}
+									/>
+								} else if (text.list_unordered) {
+									return <UnorderedList
+										items={text.list_unordered}
+										class="bullet-list"
 									/>
 								}
 							})}
