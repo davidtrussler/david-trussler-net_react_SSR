@@ -66,11 +66,13 @@ export function SinglePost(props) {
 				<a href="/blog">Back to all posts</a>
 			</p>
 
-			{ renderTitle(JSON.parse(props.post.title)) }
+			<article class="blog-post">
+				{ renderTitle(JSON.parse(props.post.title)) }
 
-			<p>{Intl.DateTimeFormat('en-GB', options).format(timestamp)}</p>
+				<p>{Intl.DateTimeFormat('en-GB', options).format(timestamp)}</p>
 
-			{ renderBody(JSON.parse(props.post.body)) }
+				{ renderBody(JSON.parse(props.post.body)) }
+			</article>
 		</React.Fragment>
 	)	
 }
