@@ -5,7 +5,7 @@ import { Span } from '../shared/Span';
 export function Listing(props) {
 	const options = {day: 'numeric', month: 'long', year: 'numeric'}; 
 	const timestamp = new Date(props.timestamp); 
-	const href = '?postid=' + `${props.postid}`; 
+	const href = '?titleid=' + `${props.titleid}`; 
 	const renderTitle = (titleObj) => {
 		if (typeof titleObj.text == 'string') {
 			return titleObj.text

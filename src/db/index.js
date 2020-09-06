@@ -12,7 +12,7 @@ let client = new Client({
 client.connect(); 
 
 function fetchAllPosts(callback) {
-	const query = 'SELECT postid, timestamp, title FROM posts ORDER BY timestamp DESC;';
+	const query = 'SELECT titleid, timestamp, title FROM posts ORDER BY timestamp DESC;';
 	
 	return new Promise((resolve, reject) => {
 		client.query(query, (err, res) => {

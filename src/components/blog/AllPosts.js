@@ -9,7 +9,7 @@ function renderPosts(posts) {
 				<Listing 
 					timestamp={post.timestamp} 
 					title={post.title}
-					postid={post.postid}
+					titleid={post.titleid}
 					index={i}
 				/>
 			)

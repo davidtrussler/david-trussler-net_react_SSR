@@ -29,10 +29,10 @@ function generateMarkup(req) {
 }
 
 function handleRender(req, res) {
-	// Blog page is requested
   if (req.url.indexOf('/blog') > -1) {
-  	// Main page requested: display listings
-  	if (req.url.indexOf('?postid') == -1) {
+		// Blog page is requested
+		if (req.url.indexOf('?titleid') == -1) {
+			// Main page requested: display listings
 			dataStore.dispatch({
 				type: 'BLOG_CALLED_MAIN',
 			}); 
@@ -43,13 +43,15 @@ function handleRender(req, res) {
 					type: 'POSTS_UPDATED', 
 					payload: data
 				}); 
-				
-			  const markup = generateMarkup(req); 
+
+				const markup = generateMarkup(req); 
 
 				res.send(renderFullPage(markup)); 
 			})
   	} else {
-  		const postid = req.url.split('?postid=')[1]; 
+  		const titleid = req.url.split('?titleid=')[1]; 
+  		const postidArr = titleid.split('-'); 
+  		const postid = postidArr[postidArr.length - 1]; 
 
 			dataStore.dispatch({
 				type: 'BLOG_CALLED_POST', 
