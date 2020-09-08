@@ -50,7 +50,7 @@ a {
 .bullet-list {
   > li {
   	position: relative;
-  	padding: 0 0 0 20px; 
+  	padding: 0 0 0 1rem; 
 
 	  &:before {
 	    content: '\2022';
@@ -69,4 +69,12 @@ a {
 
 .inlineTitle {
 	font-style: italic; 
+}
+
+.intro {
+	font-style: italic; 	
+}
+
+.strong {
+	font-weight: bold; 
 }

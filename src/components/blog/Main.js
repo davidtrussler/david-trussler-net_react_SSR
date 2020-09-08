@@ -1,30 +1,21 @@
 import React from 'react';
+import { AllPosts } from './AllPosts'; 
+import { SinglePost } from './SinglePost'; 
 
-function renderPosts(posts) {
-	if (posts === undefined) {
-		return (
-			<p>There are no posts in this blog</p>
-		)
+function renderMainContent(props) {
+	if (props.context == 'singlePost') {
+		return <SinglePost post={props.post}/>
 	} else {
-		return (
-			<ul>
-			{
-				posts.map((post, i) => 
-					<li key={i}>{post.date}: {post.title}</li>
-				)
-			}
-			</ul>
-		)
+		return <AllPosts posts={props.posts}/>		
 	}
 }
 
-export function Main(posts) {
+export function Main(props) {
 	return (
 		<main>
 			<div className="constrained">
 				<div className="main__inner">
-					<p>Content for the main section of the blog landing page goes here.</p>
-					{renderPosts(posts.posts)}
+					{ renderMainContent(props) }
 				</div>
 			</div>
 		</main>

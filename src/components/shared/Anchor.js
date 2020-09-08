@@ -5,6 +5,7 @@ export function Anchor(props) {
 			<a 
 				href={props.href}
 				target={props.target}
+				className={props.class}
 			>{props.link}</a>
 	)
 }

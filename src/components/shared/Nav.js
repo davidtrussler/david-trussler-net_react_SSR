@@ -12,6 +12,10 @@ export function Nav() {
 				<li className="main-nav__element">
 					<Anchor href="music" link="Music"/>
 				</li>
+
+				<li className="main-nav__element">
+					<Anchor href="blog" link="Blog"/>
+				</li>
 			</ul>
 		</nav>
 	)
